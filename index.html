@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project Aria</title>
+  <meta name="description" content="A 3D zombie survival sandbox with crafting, base building, grid inventory, permadeath and a family dynasty that carries on after you die.">
+  <link rel="stylesheet" href="style.css">
+  <script type="importmap">
+    { "imports": { "three": "./vendor/three.module.min.js" } }
+  </script>
+</head>
+<body>
+  <canvas id="gl"></canvas>
+  <canvas id="overlay"></canvas>
+  <div id="vignette"></div>
+  <div id="sleep-fade"></div>
+
+  <div id="hud" class="hidden">
+    <div id="hud-tl">
+      <div id="char-line"></div>
+      <div id="bars"></div>
+      <div id="statuses"></div>
+    </div>
+    <div id="hud-tr">
+      <div id="clock"></div>
+      <canvas id="minimap" width="170" height="170"></canvas>
+    </div>
+    <div id="log"></div>
+    <div id="prompt" class="hidden"></div>
+    <div id="build-hint" class="hidden"></div>
+    <div id="hotbar-wrap">
+      <div id="weapon-info"></div>
+      <div id="hotbar"></div>
+      <div id="keys-hint">Tab Inventory · Q Craft · B Build · K Character · M Map · C Crouch · Right-drag/Z/X Rotate camera</div>
+    </div>
+  </div>
+
+  <div id="panel-inv" class="panel hidden"></div>
+  <div id="panel-craft" class="panel hidden"></div>
+  <div id="panel-build" class="panel hidden"></div>
+  <div id="panel-char" class="panel hidden"></div>
+  <div id="panel-dialog" class="panel hidden"></div>
+  <div id="panel-map" class="panel hidden"><canvas id="bigmap" width="600" height="600"></canvas></div>
+
+  <div id="screen" class="screen"></div>
+
+  <div id="tooltip" class="hidden"></div>
+  <div id="ctxmenu" class="hidden"></div>
+  <div id="drag-ghost" class="hidden"></div>
+
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>
